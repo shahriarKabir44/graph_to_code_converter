@@ -1,0 +1,26 @@
+#panel{
+  height: 80px;
+  border: 1px solid;
+}
+#board{
+  border: 1px solid;
+  
+  width: 800px;
+  float: left
+}
+
+.box{
+  border: 1px solid;
+  height: 50px;
+  width: 40px;
+  float: left;
+  margin: -1px
+}
+
+#show{
+  border: 1px solid;
+  float: right;
+  width: 35%;
+  height: 100px;
+  
+}
