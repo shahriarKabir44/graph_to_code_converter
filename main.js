@@ -66,7 +66,7 @@ function drawline(x1,y1,x2,y2){
             x1--;
         }
     }
-    else{
+    else if(x1<x2){
         x1++;
         while(x1<x2){
             
@@ -85,9 +85,9 @@ function drawline(x1,y1,x2,y2){
 }
 
 function infix(node) {
-    getel('BODY').innerHTML+=(node.statement);
+    getel('res').innerHTML+=(node.statement)+"<br>";
     if (node.l) infix(node.l);
-    if (node.type)getel('BODY').innerHTML+=('}');
+    if (node.type)getel('res').innerHTML+=('}');
     if (node.r) infix(node.r);
 }
 
@@ -108,5 +108,7 @@ getel('link').onclick=()=>{
     console.log(a,b);
     getel('start').value=y;
     getel('end').value='';
+    getel('res').innerHTML=''
+    infix(objectList[0]);
 
 }
